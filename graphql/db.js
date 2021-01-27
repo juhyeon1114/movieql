@@ -43,7 +43,7 @@ export const getById = id => {
 }
 
 export const deletePerson = id => {
-    const cleanedPeople = people.filter(person => person.id === id);
+    const cleanedPeople = people.filter(person => person.id !== id);
     if (people.length > cleanedPeople.length) {
         people = cleanedPeople;
         return true;
